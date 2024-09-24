@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0px;
+  color: white;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../sky.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 20rem;
+}
+p {
+  margin: 12px 0;
+}
+header {
+  width: 20%;
+  position: fixed;
+  left: 0;
+  top: 40%;
+}
+
+section {
+  width: 79%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.foto {
+  text-align: center;
+}
+.foto > img {
+  height: 120px;
+  margin: 12px 0px;
+  padding: 12px;
+  border: 1px solid black;
+}
