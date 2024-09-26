@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio3</title>
+    <style>
+      div {
+        border: 1px solid black;
+      }
+      #contenedor1,
+      #contenedor2 {
+        width: 48%;
+      }
+      #caja1,
+      #caja2,
+      #caja3,
+      #caja4 {
+        width: 48%;
+        height: 100px;
+        display: inline-block;
+      }
+      #contenedor1,
+      #caja3,
+      #caja4 {
+        float: left;
+      }
+      #contenedor2,
+      #caja1,
+      #caja2 {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contenedor1">
+      <div id="caja1">Caja1</div>
+      <div id="caja4">Caja4</div>
+    </div>
+    <div id="contenedor2">
+      <div id="caja2">Caja2</div>
+      <div id="caja3">Caja3</div>
+    </div>
+  </body>
+</html>
