@@ -74,22 +74,26 @@ p {
 #contenedor1 {
   height: 35vw;
 }
+#contenedor3 {
+  height: 16vw;
+}
 #contenedor2,
 #contenedor3 {
   border: 5px solid black;
 }
 #contenedor-formulario {
   width: 80%;
-  margin: 0.5vw auto;
+  height: 100%;
+  margin: auto;
 }
 form {
   font-size: 1.5vw;
 }
 fieldset {
-  padding-block-start: 0.35em;
+  padding: 0.5em;
   padding-inline-start: 0.75em;
   padding-inline-end: 0.75em;
-  padding-block-end: 0.625em;
+  height: 100%;
 }
 .izq {
   height: 100%;
@@ -164,4 +168,30 @@ a:link {
 li:hover {
   background-color: black;
   color: white;
+}
+#contenedor-formulario {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+#cont-form-izq {
+  height: 100%;
+  width: 90%;
+  float: left;
+  padding-top: 0.5vw;
+  font-size: 1.5vw;
+}
+#cont-form-drcha {
+  height: 100%;
+  width: 10%;
+  float: right;
+}
+#validar {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5vw;
+}
+input {
+  height: 2vw;
+  width: 50%;
 }

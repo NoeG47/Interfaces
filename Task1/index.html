@@ -66,45 +66,53 @@
       <div class="titulo">
         <h1>FORMULARIO</h1>
       </div>
-      <div id="contenedor3">
-        <div id="contenedor-formulario">
-          <form>
-            <fieldset>
-              <legend>Datos de pago</legend>
-              <div id="form-row1">
-                <label
-                  ><span style="color: red; font-weight: bold">*</span>Indica un
-                  campo obligatorio</label
-                >
-              </div>
-              <div id="form-row2">
-                <label for="nombre-tarjeta" class="is-required"
-                  >Nombre del titular de la tarjeta</label
-                >
-                <input type="text" name="nombre-tarjeta" id="nombre-tarjeta" />
-              </div>
-              <div id="form-row3">
-                <label for="num-tarjeta" class="is-required"
-                  >Número de la tarjeta</label
-                >
-                <input type="text" name="num-tarjeta" id="num-tarjeta" />
-              </div>
-              <div id="form-row4">
-                <label for="fecha" class="is-required"
-                  >Fecha de vencimiento</label
-                >
-                <input type="number" id="dia" name="fecha" />
-                <input type="number" id="mes" name="fecha" />
-              </div>
-              <div id="form-row5">
-                <label for="cvv" class="is-required">CVV</label>
-                <input type="text" name="cvv" id="cvv" />
-              </div>
-            </fieldset>
-          </form>
+      <form action="#" method="get">
+        <div id="contenedor3">
+          <div id="contenedor-formulario">
+            <div id="cont-form-izq">
+              <fieldset>
+                <legend>Datos de pago</legend>
+                <div id="form-row1">
+                  <label
+                    ><span style="color: red; font-weight: bold">*</span>Indica
+                    un campo obligatorio</label
+                  >
+                </div>
+                <div id="form-row2">
+                  <label for="nombre-tarjeta" class="is-required"
+                    >Nombre del titular de la tarjeta</label
+                  >
+                  <input
+                    type="text"
+                    name="nombre-tarjeta"
+                    id="nombre-tarjeta"
+                  />
+                </div>
+                <div id="form-row3">
+                  <label for="num-tarjeta" class="is-required"
+                    >Número de la tarjeta</label
+                  >
+                  <input type="text" name="num-tarjeta" id="num-tarjeta" />
+                </div>
+                <div id="form-row4">
+                  <label for="fecha" class="is-required"
+                    >Fecha de vencimiento</label
+                  >
+                  <input type="number" id="dia" name="fecha" />
+                  <input type="number" id="mes" name="fecha" />
+                </div>
+                <div id="form-row5">
+                  <label for="cvv" class="is-required">CVV</label>
+                  <input type="text" name="cvv" id="cvv" />
+                </div>
+              </fieldset>
+            </div>
+            <div id="cont-form-drcha">
+              <input type="button" value="Validar" id="validar" />
+            </div>
+          </div>
         </div>
-        <div id="boton"></div>
-      </div>
+      </form>
     </div>
   </body>
 </html>
