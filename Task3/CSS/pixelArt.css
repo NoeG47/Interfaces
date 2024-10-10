@@ -1,4 +1,4 @@
-#contenedor {
+#contenedorAmongUs {
   display: grid;
   grid-template-columns: repeat(16, 25px);
   grid-template-rows: repeat(21, 25px);
