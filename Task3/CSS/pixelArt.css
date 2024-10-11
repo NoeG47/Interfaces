@@ -1,10 +1,12 @@
 #contenedorAmongUs {
   display: grid;
-  grid-template-columns: repeat(16, 25px);
-  grid-template-rows: repeat(21, 25px);
+  grid-template-columns: repeat(16, 2%);
+  grid-template-rows: repeat(21, auto);
   width: 100%;
+  height: 100%;
   justify-content: center;
 }
+
 /*div {
   border: 1px solid black;
 }*/
