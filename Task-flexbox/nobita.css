@@ -1,6 +1,60 @@
 #contenedor {
-  height: 120vh;
-  width: 80%;
+  height: 105vh;
+  width: 35%;
   margin: auto;
+  border: 0px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+div {
+  height: 100%;
+  width: 100%;
   border: 1px solid black;
+  box-sizing: border-box;
+}
+#id1,
+#id2,
+#id3,
+#id4,
+#id5,
+#id6,
+#id7,
+#id8,
+#id9,
+#id10,
+#id11,
+#id12,
+#id13,
+#id14,
+#id15,
+#id16,
+#id17,
+#id18,
+#id19,
+#id20,
+#id21,
+#id22,
+#id23,
+#id24 {
+  display: flex;
+  flex-direction: column;
+  border-right: 0px;
+  border-left: 0px;
+  box-sizing: border-box;
+}
+.black {
+  background-color: black;
+}
+.wh-red {
+  background-color: rgb(255, 164, 164);
+}
+.red {
+  background-color: rgb(221, 35, 35);
+}
+.atw {
+  background-color: antiquewhite;
+}
+.yellow {
+  background-color: yellow;
 }
