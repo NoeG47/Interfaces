@@ -122,12 +122,12 @@
   width: 50%;
 }
 #nariz-drcha {
-  height: 35%;
+  height: 100%;
   width: 30%;
   background-color: rgb(100, 100, 100);
 }
 #nariz-izq {
-  height: 35%;
+  height: 100%;
   width: 30%;
   background-color: rgb(100, 100, 100);
 }
@@ -152,14 +152,27 @@
 }
 #caja-nariz-drcha {
   display: flex;
-  align-items: start;
   flex-direction: column;
 }
-
+#caja-invisible-drcha {
+  height: 35%;
+  width: 100%;
+  border-right: 1px solid rgba(128, 128, 128, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
 #caja-nariz-izq {
   display: flex;
-  align-items: end;
   flex-direction: column;
+}
+#caja-invisible-izq {
+  height: 35%;
+  width: 100%;
+  border-left: 1px solid rgba(128, 128, 128, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 #boca-izq1 {
   height: 24%;
@@ -315,42 +328,35 @@
   height: 50%;
   width: 100%;
   display: flex;
+  justify-content: end;
 }
 #row2-izq {
   height: 88%;
   width: 100%;
   display: flex;
+  justify-content: end;
 }
 
 #cont-abs {
   width: 10%;
   height: 100%;
 }
-#row1-abs {
+#row1-abs,
+#row2-abs,
+#row3-abs,
+#row5-abs {
   height: 10%;
   width: 100%;
   display: flex;
-}
-#row2-abs {
-  height: 10%;
-  width: 100%;
-  display: flex;
-}
-#row3-abs {
-  height: 10%;
-  width: 100%;
-  display: flex;
+  justify-content: end;
 }
 #row4-abs {
   height: 60%;
   width: 100%;
   display: flex;
+  justify-content: end;
 }
-#row5-abs {
-  height: 10%;
-  width: 100%;
-  display: flex;
-}
+
 .rojo-izq {
   height: 100%;
   width: 90%;
@@ -381,21 +387,14 @@
   width: 10%;
   background-color: red;
 }
-#negro1-izq {
-  height: 100%;
-  width: 50%;
-  background-color: black;
-}
-#negro2-izq {
-  height: 100%;
-  width: 50%;
-  background-color: black;
-}
+#negro1-izq,
+#negro2-izq,
 #negro3-izq {
   height: 100%;
   width: 50%;
   background-color: black;
 }
+
 #negro4-izq {
   height: 100%;
   width: 50%;
@@ -440,7 +439,6 @@
 #id2-drcho {
   height: 50%;
   width: 100%;
-  background-color: red;
   display: flex;
   flex-direction: row-reverse;
 }
@@ -455,18 +453,15 @@
   width: 10%;
   height: 100%;
 }
-#row6-abs {
+#row6-abs,
+#row7-abs,
+#row10-abs {
   height: 10%;
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
 }
-#row7-abs {
-  height: 10%;
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-}
+
 #row8-abs {
   height: 10%;
   width: 100%;
@@ -478,12 +473,7 @@
   display: flex;
   flex-direction: row-reverse;
 }
-#row10-abs {
-  height: 10%;
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-}
+
 .rojo-drcho {
   height: 100%;
   width: 90%;
@@ -590,6 +580,7 @@
   width: 100%;
   align-items: end;
   flex-direction: row-reverse;
+  justify-content: start;
 }
 #rojo1-brazo-drcho {
   height: 100%;
@@ -626,4 +617,116 @@
   align-items: center;
   justify-content: start;
   flex-direction: row-reverse;
+}
+/* Piernas */
+#contenedor3 {
+  height: 50vh;
+  display: flex;
+}
+/*Pierna izquierda */
+#cont-pierna-izq {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+#cont-pierna-izq > div {
+  height: 8%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+#pierna-izq3,
+#pierna-izq4 {
+  height: 5% !important;
+}
+#pierna-izq5 {
+  height: 6% !important;
+}
+#pierna-izq8,
+#pierna-izq10 {
+  height: 6% !important;
+}
+#pierna-izq9 {
+  height: 4% !important;
+}
+#pierna-izq11 {
+  height: 28% !important;
+}
+.pierna-px-red {
+  height: 100%;
+  width: 2%;
+  background-color: red;
+}
+.pierna-px-black {
+  width: 5%;
+  background-color: black;
+}
+.ancho_incremento {
+  width: 6%;
+}
+.ancho_incremento2 {
+  width: 7%;
+}
+.ancho_incremento3 {
+  width: 8%;
+}
+.ancho_incremento4 {
+  width: 9%;
+}
+.ancho_incremento5 {
+  width: 10%;
+}
+.ancho_decremento {
+  width: 3%;
+}
+.none2 {
+  height: 100%;
+  width: 5%;
+}
+.none3 {
+  height: 100%;
+  width: 8%;
+}
+.none4 {
+  height: 100%;
+  width: 12%;
+}
+.none5 {
+  height: 100%;
+  width: 15%;
+}
+/*Pierna derecha */
+
+#cont-pierna-drcho {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+#cont-pierna-drcho > div {
+  height: 8%;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: row-reverse;
+}
+
+#pierna-drcho3,
+#pierna-drcho4 {
+  height: 5% !important;
+}
+#pierna-drcho5 {
+  height: 6% !important;
+}
+#pierna-drcho8,
+#pierna-drcho10 {
+  height: 6% !important;
+}
+#pierna-drcho9 {
+  height: 4% !important;
+}
+#pierna-drcho11 {
+  height: 28% !important;
 }
