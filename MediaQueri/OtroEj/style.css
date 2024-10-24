@@ -1,0 +1,64 @@
+#cuerpo {
+  display: flex;
+  height: 50vw;
+  width: 60%;
+  margin: auto;
+  flex-direction: row;
+  background-image: url(mar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+  gap: 2%;
+}
+#fila1,
+#fila2,
+#fila3,
+#fila4 {
+  display: flex;
+  width: 24%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: end;
+}
+#fila3 {
+  justify-content: start;
+}
+#fila4,
+#fila2 {
+  justify-content: space-between;
+}
+#caja4 {
+  height: 22%;
+  width: 100%;
+  background-color: black;
+  border: 1px solid yellow;
+}
+#caja5,
+#caja8 {
+  height: 22%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+}
+#caja6,
+#caja7 {
+  height: 22%;
+  width: 100%;
+  background-color: red;
+  border: 1px solid yellow;
+}
+#caja9,
+#caja10 {
+  height: 22%;
+  width: 100%;
+  background-color: green;
+  border: 1px solid yellow;
+}
+
+#caja11,
+#caja12,
+#caja13 {
+  height: 22%;
+  width: 100%;
+  background-color: blue;
+  border: 1px solid yellow;
+}

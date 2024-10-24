@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ejemplo de media queri</title>
+    <style>
+      #oculto {
+        display: none;
+      }
+      @media only screen and (max-width: 600px) {
+        body {
+          background-color: lightblue;
+        }
+        h1 {
+          color: palevioletred;
+        }
+        #oculto {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Malibu con piña</h1>
+    <div id="oculto"><img src="descarga.jpeg" alt="malibu_con_piña" /></div>
+  </body>
+</html>
