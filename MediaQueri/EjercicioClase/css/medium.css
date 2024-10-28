@@ -2,6 +2,9 @@
   section {
     grid-template-columns: repeat(6, 1fr);
   }
+  article > * {
+    font-size: 1.2em !important;
+  }
   section article:nth-child(1) {
     grid-row-start: 1;
     grid-row-end: 2;
@@ -44,5 +47,15 @@
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 4;
+  }
+  article {
+    background-color: aquamarine;
+  }
+  h3,
+  h1 {
+    color: red;
+  }
+  header {
+    background-color: black;
   }
 }

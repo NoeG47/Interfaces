@@ -2,6 +2,9 @@
   section {
     grid-template-columns: repeat(6, 1fr);
   }
+  article > * {
+    font-size: 1.5em !important;
+  }
   section article:nth-child(1) {
     grid-column: 1/3;
   }
