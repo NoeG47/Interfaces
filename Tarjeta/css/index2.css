@@ -7,9 +7,18 @@
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
-/*Lo que había aquí en rem es lo mismo en px, pero como no se leer lo he puesto en px xd*/
-#idTarjeta {
-  width: 400px;
+section {
+  height: 70vh;
+  width: 60%;
+  margin: auto;
+}
+.row {
+  height: 250px;
+  margin-bottom: 2%;
+}
+/*Ahora es interesante el uso de % en el ancho de las imágenes y un valor fijo en el alto.*/
+.idTarjeta {
+  width: 40%;
   height: 250px;
   border-radius: 0.625rem;
   -webkit-border-radius: 0.625rem;
@@ -25,22 +34,22 @@
   z-index: -1;
 }
 
-#titulos {
+.titulos {
   position: relative;
   top: 190px;
   width: 100%;
   margin-left: 2%;
   z-index: 2;
 }
-#logo {
+.logo {
   height: 20%;
   width: 15%;
   position: relative;
-  left: 325px;
+  left: 80%;
   top: -35px;
   z-index: 2;
 }
-#logo img {
+.logo img {
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -52,6 +61,12 @@
 }
 .shadow {
   text-shadow: rgb(170, 0, 255) 0.1em 0.1em 0.2em;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
 }
 h1 {
   background: -webkit-linear-gradient(#ffffff, #ddb3ff);
