@@ -1,0 +1,29 @@
+$color-primario: #3498db;
+$color-secundario: #e74c3c;
+$color-titulo: #ffffff;
+$tamano-fuente: 16px;
+$espaciado: 20px;
+// Uso de variables
+.encabezado {
+  background-color: $color-primario;
+  font-size: $tamano-fuente;
+  padding: $espaciado;
+  color: $color-titulo;
+}
+.boton {
+  background-color: $color-secundario;
+  font-size: $tamano-fuente;
+  margin: $espaciado;
+}
+.contenedor {
+  background-color: #f0f0f0;
+  padding: 20px;
+  h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  p {
+    font-size: 16px;
+    color: #666;
+  }
+}
