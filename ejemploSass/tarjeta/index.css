@@ -24,10 +24,6 @@ section {
   width: 40%;
   height: 250px;
   border-radius: 0.625rem;
-  -webkit-border-radius: 0.625rem;
-  -moz-border-radius: 0.625rem;
-  -ms-border-radius: 0.625rem;
-  -o-border-radius: 0.625rem;
   background-image: url("./images/foto.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,6 +41,7 @@ section {
 }
 .idTarjeta .titulos h1 {
   background: -webkit-linear-gradient(#ffffff, #ddb3ff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(2px 2px #2b00ff);

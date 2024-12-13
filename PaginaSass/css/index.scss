@@ -1,0 +1,126 @@
+$colorFondoPrincipalNavbar: #dbdad4;
+$d-flex: flex;
+$d-grid: grid;
+$centro: center;
+$nada: none;
+$wrap: wrap;
+$espaciadoNavbar: space-between;
+$colorTextoNav: #c76839;
+$colorTextoNavSec: #832f06;
+$colorTextoNavHover: #c76839;
+$colorEnlacesNav: #c82a16;
+$negrita: bold;
+* {
+  margin: 0;
+}
+.navbar {
+  // display: $d-flex;
+  // flex-wrap: $wrap;
+  // align-items: $centro;
+  // justify-content: $espaciadoNavbar;
+  background-color: $colorFondoPrincipalNavbar;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: $d-flex;
+  align-items: $centro;
+  justify-content: $centro;
+  img {
+    height: 6rem;
+    margin-left: 0.625rem;
+  }
+  span {
+    color: $colorTextoNav;
+    font-size: 2.25rem;
+    font-weight: $negrita;
+  }
+  a.header {
+    display: $d-flex;
+    align-items: $centro;
+    text-decoration: $nada;
+    flex-direction: row-reverse;
+  }
+}
+
+.menu {
+  display: $d-flex;
+  list-style: $nada;
+  margin: 0;
+  padding: 0;
+  flex-wrap: $wrap;
+  justify-content: $centro;
+  color: $colorEnlacesNav;
+  font-size: 1.5rem;
+  font-weight: $negrita;
+  li {
+    margin: 0 1rem;
+    a {
+      text-decoration: $nada;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 0.125rem solid transparent;
+      color: $colorTextoNavSec;
+      &:hover {
+        color: $colorTextoNavHover;
+        border-bottom: 0.125rem solid $colorTextoNavHover;
+      }
+      &:visited {
+        text-decoration: $nada;
+        color: $colorEnlacesNav;
+      }
+    }
+  }
+}
+.grid-contenedor {
+  display: $d-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: $centro;
+  gap: 2%;
+  div {
+    padding: 2%;
+    text-align: center;
+    box-sizing: border-box;
+    height: 85%;
+    font-size: 1rem;
+  }
+}
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1 / 1;
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 85%;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  .descripcion {
+    height: min-content;
+    position: relative;
+    top: -15%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    box-sizing: border-box;
+    background-color: white;
+    color: $colorTextoNavSec;
+  }
+}
+.boton {
+  background-color: $colorEnlacesNav;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+  text-decoration: $nada;
+  height: min-content;
+  &:hover {
+    background-color: #c76839;
+  }
+}
