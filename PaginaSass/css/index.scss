@@ -1,5 +1,4 @@
 $colorFondoPrincipalNavbar: #dbdad4;
-$d-flex: flex;
 $d-grid: grid;
 $centro: center;
 $nada: none;
@@ -8,10 +7,19 @@ $espaciadoNavbar: space-between;
 $colorTextoNav: #c76839;
 $colorTextoNavSec: #832f06;
 $colorTextoNavHover: #c76839;
-$colorEnlacesNav: #c82a16;
+$colorPrincipal: #c82a16;
 $negrita: bold;
 * {
   margin: 0;
+}
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin p-rojo {
+  text-decoration: none;
+  color: $colorTextoNavSec;
 }
 .navbar {
   // display: $d-flex;
@@ -24,9 +32,7 @@ $negrita: bold;
 }
 
 .logo {
-  display: $d-flex;
-  align-items: $centro;
-  justify-content: $centro;
+  @include flexbox-center;
   img {
     height: 6rem;
     margin-left: 0.625rem;
@@ -37,13 +43,11 @@ $negrita: bold;
     font-weight: $negrita;
   }
   a.header {
-    display: $d-flex;
-    align-items: $centro;
+    @include flexbox-center;
     text-decoration: $nada;
     flex-direction: row-reverse;
   }
 }
-
 .menu {
   display: $d-flex;
   list-style: $nada;
@@ -99,11 +103,10 @@ $negrita: bold;
     border-radius: 5px;
   }
   .descripcion {
+    @include flexbox-center;
     height: min-content;
     position: relative;
     top: -15%;
-    display: flex;
-    justify-content: center;
     gap: 5%;
     box-sizing: border-box;
     background-color: white;
