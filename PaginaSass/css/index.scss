@@ -4,9 +4,8 @@ $centro: center;
 $nada: none;
 $wrap: wrap;
 $espaciadoNavbar: space-between;
-$colorTextoNav: #c76839;
+$colorTexto: #c76839;
 $colorTextoNavSec: #832f06;
-$colorTextoNavHover: #c76839;
 $colorPrincipal: #c82a16;
 $negrita: bold;
 * {
@@ -38,7 +37,7 @@ $negrita: bold;
     margin-left: 0.625rem;
   }
   span {
-    color: $colorTextoNav;
+    color: $colorTexto;
     font-size: 2.25rem;
     font-weight: $negrita;
   }
@@ -49,13 +48,12 @@ $negrita: bold;
   }
 }
 .menu {
-  display: $d-flex;
+  @include flexbox-center;
   list-style: $nada;
   margin: 0;
   padding: 0;
   flex-wrap: $wrap;
-  justify-content: $centro;
-  color: $colorEnlacesNav;
+  color: colorPrincipal;
   font-size: 1.5rem;
   font-weight: $negrita;
   li {
@@ -64,14 +62,14 @@ $negrita: bold;
       text-decoration: $nada;
       transition: color 0.3s, border-bottom 0.3s;
       border-bottom: 0.125rem solid transparent;
-      color: $colorTextoNavSec;
+      color: $colorPrincipal;
       &:hover {
-        color: $colorTextoNavHover;
-        border-bottom: 0.125rem solid $colorTextoNavHover;
+        color: $colorTextoNavSec;
+        border-bottom: 0.125rem solid $colorTextoNavSec;
       }
       &:visited {
         text-decoration: $nada;
-        color: $colorEnlacesNav;
+        color: $colorTextoNavSec;
       }
     }
   }
@@ -114,7 +112,7 @@ $negrita: bold;
   }
 }
 .boton {
-  background-color: $colorEnlacesNav;
+  background-color: $colorPrincipal;
   color: white;
   border: none;
   border-radius: 0.25rem;

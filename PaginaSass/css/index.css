@@ -10,8 +10,8 @@
 
 .logo {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .logo img {
   height: 6rem;
@@ -24,6 +24,7 @@
 }
 .logo a.header {
   display: flex;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
   flex-direction: row-reverse;
@@ -31,12 +32,13 @@
 
 .menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
-  justify-content: center;
-  color: #c82a16;
+  color: colorPrincipal;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -47,15 +49,15 @@
   text-decoration: none;
   transition: color 0.3s, border-bottom 0.3s;
   border-bottom: 0.125rem solid transparent;
-  color: #832f06;
+  color: #c82a16;
 }
 .menu li a:hover {
-  color: #c76839;
-  border-bottom: 0.125rem solid #c76839;
+  color: #832f06;
+  border-bottom: 0.125rem solid #832f06;
 }
 .menu li a:visited {
   text-decoration: none;
-  color: #c82a16;
+  color: #832f06;
 }
 
 .grid-contenedor {
@@ -88,12 +90,13 @@
   border-radius: 5px;
 }
 .img .descripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: -moz-min-content;
   height: min-content;
   position: relative;
   top: -15%;
-  display: flex;
-  justify-content: center;
   gap: 5%;
   box-sizing: border-box;
   background-color: white;
