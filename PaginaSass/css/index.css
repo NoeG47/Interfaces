@@ -1,11 +1,22 @@
 * {
   margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
+/* Estilos */
 .navbar {
   background-color: #dbdad4;
   padding: 1rem 1.5rem;
   box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .logo {
@@ -17,104 +28,162 @@
   height: 6rem;
   margin-left: 0.625rem;
 }
-.logo span {
+.logo h1 {
   color: #c76839;
   font-size: 2.25rem;
-  font-weight: bold;
 }
-.logo a.header {
+.logo a.header,
+.logo a.footer {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  flex-direction: row-reverse;
+  list-style: none;
+  font-weight: bold;
 }
 
-.menu {
+.logo-footer span {
+  color: #c76839;
+  font-size: 1.25rem;
+}
+
+.menu,
+.menu-footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-  color: colorPrincipal;
-  font-size: 1.5rem;
   font-weight: bold;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
 }
-.menu li {
+.menu li,
+.menu-footer li {
   margin: 0 1rem;
 }
-.menu li a {
+.menu li a,
+.menu-footer li a {
   text-decoration: none;
+  list-style: none;
+  font-weight: bold;
   transition: color 0.3s, border-bottom 0.3s;
   border-bottom: 0.125rem solid transparent;
   color: #c82a16;
 }
-.menu li a:hover {
+.menu li a:hover,
+.menu-footer li a:hover {
   color: #832f06;
   border-bottom: 0.125rem solid #832f06;
 }
-.menu li a:visited {
-  text-decoration: none;
+.menu li a:visited,
+.menu-footer li a:visited {
   color: #832f06;
+}
+.menu li i,
+.menu-footer li i {
+  color: #c82a16;
+}
+.menu li i:hover,
+.menu-footer li i:hover {
+  color: #832f06;
+}
+.menu li i:visited,
+.menu-footer li i:visited {
+  color: #832f06;
+}
+
+.menu-footer:last-child {
+  font-size: 1.2rem;
+}
+
+#copyright {
+  background-color: #c11f1f;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: white;
 }
 
 .grid-contenedor {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
-  gap: 2%;
 }
-.grid-contenedor div {
-  padding: 2%;
-  text-align: center;
-  box-sizing: border-box;
-  height: 85%;
-  font-size: 1rem;
+.grid-contenedor .tarjeta {
+  border: 1px solid #c82a16;
+  border-radius: 2%;
+  margin: 4%;
 }
-
-.img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 1/1;
+.grid-contenedor .cont-img {
+  height: 250px;
 }
-.img img {
-  width: 100%;
-  height: 100%;
-  max-width: 85%;
+.grid-contenedor .cont-img img {
   -o-object-fit: contain;
      object-fit: contain;
-  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  padding: 2%;
 }
-.img .descripcion {
+.grid-contenedor .cuerpo-tarjeta {
+  height: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: -moz-min-content;
-  height: min-content;
-  position: relative;
-  top: -15%;
-  gap: 5%;
-  box-sizing: border-box;
-  background-color: white;
+  padding: 2%;
+}
+.grid-contenedor strong:first-child {
   color: #832f06;
+}
+.grid-contenedor strong {
+  color: #c82a16;
 }
 
 .boton {
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
   background-color: #c82a16;
   color: white;
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
-  font-size: 1.5rem;
   transition: background-color 0.3s;
-  text-decoration: none;
   height: -moz-min-content;
   height: min-content;
+  font-weight: inherit;
 }
 .boton:hover {
   background-color: #c76839;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 1720px) {
+  .grid-contenedor {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .grid-contenedor {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cuerpo-tarjeta {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .boton {
+    border-radius: 2px;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .grid-contenedor {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .navbar {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=index.css.map */
