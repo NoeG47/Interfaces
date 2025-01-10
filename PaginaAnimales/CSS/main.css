@@ -1,8 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Fauna+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+.bg-primary {
+  background-color: #9fe206;
+}
+
+.bg-secondary {
+  background-color: #0b6853;
+}
+
+.bg-accent {
+  background-color: #ffffff;
+}
+
+.bg-dark {
+  background-color: #333333;
+}
+
+.icon-small {
+  font-size: 1rem;
+  padding: 11px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: #0b6853;
+}
+
+.icon-medium, .menu i {
+  font-size: 1.5rem;
+  padding: 11px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: #0b6853;
+}
+
+.icon-large {
+  font-size: 2rem;
+  padding: 11px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: #0b6853;
+}
+
+.box-1 {
+  background-color: #0d7f65;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #095141;
+}
+.box-1:hover {
+  background-color: #095141;
+  color: #ffffff;
+}
+
+.box-2 {
+  background-color: #109678;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #063a2e;
+}
+.box-2:hover {
+  background-color: #063a2e;
+  color: #ffffff;
+}
+
+.box-3 {
+  background-color: #12ad8a;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #04231c;
+}
+.box-3:hover {
+  background-color: #04231c;
+  color: #ffffff;
+}
+
+.box-4 {
+  background-color: #15c49d;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #010c09;
+}
+.box-4:hover {
+  background-color: #010c09;
+  color: #ffffff;
+}
+
+.box-5 {
+  background-color: #17dbaf;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid black;
+}
+.box-5:hover {
+  background-color: black;
+  color: #ffffff;
+}
+
 .navbar {
   background-color: #9fe206;
   padding: 0.25rem 0.5rem;
   box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
   display: flex;
+  justify-content: center;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -23,10 +126,9 @@ a img {
 .logo h1,
 a h1 {
   font-size: 2.25rem;
-  text-decoration: none;
-  list-style: none;
   color: #0b6853;
   margin: 1rem 0rem;
+  font-family: "Fauna One", serif;
 }
 
 .menu {
@@ -36,17 +138,27 @@ a h1 {
   flex-wrap: wrap;
   font-size: 1.5rem;
   margin: 1rem 0rem;
+  padding: 0;
+  gap: 16px;
 }
 .menu li {
-  margin: 0 1rem;
   list-style: none;
+  padding: 0 1rem;
 }
 .menu li a {
   color: #0b6853;
-  transition: color 0.3s, border-bottom 0.3s;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
   border-bottom: 0.125rem solid transparent;
+  font-family: "Cabin", serif;
+  font-size: 1.5rem;
 }
-
+.menu li a:hover {
+  color: #ffffff;
+  border-bottom: 0.125rem solid #ffffff;
+}
+.menu li a:visited, .menu li a:active {
+  color: #0b6853;
+}
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -57,27 +169,56 @@ a h1 {
   background: transparent;
   cursor: pointer;
 }
-.menu-toggle .bar {
-  height: 4px;
-  width: 100%;
-  background-color: #0b6853;
-  transition: 0.3s;
-}
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  .toggle .menu-toggle {
+    display: flex;
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    border: 1px solid green;
+    border-radius: 10px;
+  }
   .menu {
     display: none;
     width: 100%;
     flex-direction: column;
     align-items: center;
   }
-  .menu-toggle {
-    display: flex;
-  }
   .menu.active {
     display: flex;
+    gap: 0;
+  }
+  .menu.active li {
+    width: 100%;
+    padding: 0;
+  }
+  .menu.active li a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .menu.active li a:hover {
+    background-color: #ffffff;
+    color: #0b6853;
+  }
+  .menu.active li a:active {
+    background-color: #e6e6e6;
   }
 }
+section .foto-principal {
+  height: 60vh;
+  border: 1px solid black;
+  background-image: url("../IMAGES/aniamales.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
