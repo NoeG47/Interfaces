@@ -1,8 +1,8 @@
 // Mapa para colores de fondo
 $background-colors: (
-  primary: #9fe206,
+  primary: #f0ffcc,
   secondary: #0b6853,
-  accent: #ffffff,
+  accent: #7bf755,
   dark: #333333,
 );
 
@@ -53,13 +53,26 @@ $icon-sizes: (
 }
 
 // Estilo del header
-.navbar {
-  background-color: map-get($background-colors, primary);
-  padding: 0.25rem 0.5rem;
-  box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
-  @include flex-center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1024;
+
+  .navbar {
+    background-color: map-get($background-colors, primary);
+    padding: 0.25rem 0.5rem;
+    box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
+    @include flex-center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: background-color 0.3s ease;
+  }
+
+  &.scrolled {
+    .navbar {
+      background-color: white;
+    }
+  }
 }
 
 .logo,
@@ -87,7 +100,6 @@ a {
   font-size: 1.5rem;
   margin: 1rem 0rem;
   padding: 0;
-  gap: 16px;
 
   li {
     list-style: none;
@@ -98,7 +110,7 @@ a {
       transition: color 0.3s ease, border-bottom 0.3s ease;
       border-bottom: 0.125rem solid transparent;
       font-family: "Cabin", serif;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
 
       &:hover {
         color: map-get($background-colors, accent);
@@ -162,6 +174,7 @@ a {
         &:hover {
           background-color: map-get($background-colors, accent);
           color: map-get($background-colors, secondary);
+          border-radius: 1rem;
         }
 
         &:active {

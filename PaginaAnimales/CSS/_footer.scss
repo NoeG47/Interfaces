@@ -1,0 +1,68 @@
+.navbar {
+  background-color: map-get($background-colors, primary);
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
+  @include flex-center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  transition: background-color 0.3s ease;
+}
+.logo {
+  @include flex-center;
+  text-decoration: none;
+  list-style: none;
+
+  img {
+    height: 6rem;
+    margin-left: 0.625rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+    color: map-get($background-colors, secondary);
+    margin: 1rem 0rem;
+    font-family: "Fauna One", serif;
+    font-weight: bold;
+  }
+}
+
+.menu-footer {
+  @include flex-center;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  margin: 1rem 0rem;
+  padding: 0;
+
+  li {
+    list-style: none;
+    padding: 0 1rem;
+
+    a {
+      color: map-get($background-colors, secondary);
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      border-bottom: 0.125rem solid transparent;
+      font-family: "Cabin", serif;
+      font-size: 1.6rem;
+
+      &:hover {
+        color: map-get($background-colors, accent);
+        border-bottom: 0.125rem solid map-get($background-colors, accent);
+      }
+
+      &:visited,
+      &:active {
+        color: map-get($background-colors, secondary);
+      }
+    }
+  }
+  i {
+    @extend .icon-medium;
+  }
+}
+
+.copyright {
+  background-color: #407400;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}

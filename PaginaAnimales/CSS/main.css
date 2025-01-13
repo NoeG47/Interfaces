@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
 .bg-primary {
-  background-color: #9fe206;
+  background-color: #f0ffcc;
 }
 
 .bg-secondary {
@@ -10,7 +10,7 @@
 }
 
 .bg-accent {
-  background-color: #ffffff;
+  background-color: #7bf755;
 }
 
 .bg-dark {
@@ -26,7 +26,7 @@
   color: #0b6853;
 }
 
-.icon-medium, .menu i {
+.icon-medium, .menu-footer i, .menu i {
   font-size: 1.5rem;
   padding: 11px;
   width: 100%;
@@ -99,8 +99,13 @@
   color: #ffffff;
 }
 
-.navbar {
-  background-color: #9fe206;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1024;
+}
+header .navbar {
+  background-color: #f0ffcc;
   padding: 0.25rem 0.5rem;
   box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
   display: flex;
@@ -108,6 +113,10 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  transition: background-color 0.3s ease;
+}
+header.scrolled .navbar {
+  background-color: white;
 }
 
 .logo,
@@ -139,7 +148,6 @@ a h1 {
   font-size: 1.5rem;
   margin: 1rem 0rem;
   padding: 0;
-  gap: 16px;
 }
 .menu li {
   list-style: none;
@@ -150,11 +158,11 @@ a h1 {
   transition: color 0.3s ease, border-bottom 0.3s ease;
   border-bottom: 0.125rem solid transparent;
   font-family: "Cabin", serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .menu li a:hover {
-  color: #ffffff;
-  border-bottom: 0.125rem solid #ffffff;
+  color: #7bf755;
+  border-bottom: 0.125rem solid #7bf755;
 }
 .menu li a:visited, .menu li a:active {
   color: #0b6853;
@@ -203,20 +211,153 @@ a h1 {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   .menu.active li a:hover {
-    background-color: #ffffff;
+    background-color: #7bf755;
     color: #0b6853;
+    border-radius: 1rem;
   }
   .menu.active li a:active {
-    background-color: #e6e6e6;
+    background-color: #55f524;
   }
 }
 section .foto-principal {
-  height: 60vh;
-  border: 1px solid black;
-  background-image: url("../IMAGES/aniamales.jpg");
+  height: 34vw;
+  max-height: 55rem;
+  background-image: url(../IMAGES/aniamales.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: local;
+  background-position-y: -60px;
+}
+section .grid-section {
+  padding: 2% 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+section .grid-section .div-text {
+  grid-column: 3/7;
+}
+section .grid-section .div-text .flex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section .grid-section .div-text h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  font-family: "Fauna One", serif;
+}
+section .grid-section .div-text button {
+  cursor: pointer;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.75rem 1.5rem;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #027a00;
+  border: 2px solid #027a00;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+section .grid-section .div-text button:hover {
+  background-color: #0b6853;
+  border: 2px solid #0b6853;
+}
+section .grid-section .div-text p {
+  font-size: 1.2rem;
+  letter-spacing: 0.015em;
+  line-height: 150%;
+}
+section .grid-section .div-img {
+  grid-column: 8/12;
+}
+section .grid-section .div-img #cont-img img {
+  width: 100%;
+  max-width: 38rem;
+  height: 100%;
+  max-height: 24rem;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  section .grid-section {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 4%;
+  }
+  section .grid-section .flex {
+    align-items: center;
+  }
+}
+.navbar {
+  background-color: #f0ffcc;
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+.logo img {
+  height: 6rem;
+  margin-left: 0.625rem;
+}
+.logo span {
+  font-size: 1.5rem;
+  color: #0b6853;
+  margin: 1rem 0rem;
+  font-family: "Fauna One", serif;
+  font-weight: bold;
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  margin: 1rem 0rem;
+  padding: 0;
+}
+.menu-footer li {
+  list-style: none;
+  padding: 0 1rem;
+}
+.menu-footer li a {
+  color: #0b6853;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 0.125rem solid transparent;
+  font-family: "Cabin", serif;
+  font-size: 1.6rem;
+}
+.menu-footer li a:hover {
+  color: #7bf755;
+  border-bottom: 0.125rem solid #7bf755;
+}
+.menu-footer li a:visited, .menu-footer li a:active {
+  color: #0b6853;
+}
+.copyright {
+  background-color: #407400;
+  padding: 1rem;
+  text-align: center;
+  color: white;
 }
 
 body {
