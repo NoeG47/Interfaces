@@ -1,6 +1,12 @@
+// Función
+@function calculate-spacing($percent) {
+  @return $percent * 1%;
+}
+
+// Estilos
 section {
   .relieve {
-    background-color: #008017;
+    background-color: map-get($background-colors, success);
     clip-path: polygon(
       0% 100%,
       12.5% 80%,
@@ -14,7 +20,21 @@ section {
     );
     height: 12vh;
   }
-  /*Primera seccion*/
+
+  .sub-title {
+    background-color: map-get($background-colors, success);
+    text-align: center;
+    font-size: 3.5rem;
+    color: #ffffff;
+    h2 {
+      margin: 0%;
+      font-family: "Cabin Sketch", cursive;
+      border-top: 1px solid map-get($background-colors, success);
+      border-bottom: 1px solid map-get($background-colors, success);
+    }
+  }
+
+  // Primera sección
   .foto-principal {
     height: 34vw;
     max-height: 55rem;
@@ -24,10 +44,12 @@ section {
     background-attachment: local;
     background-position-y: -60px;
   }
+
   .grid-section {
-    padding: 2% 0;
+    padding: calculate-spacing(3) calculate-spacing(2);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
     .div-text {
       grid-column: 3/7;
       .flex {
@@ -35,29 +57,25 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        .info {
+          padding: calculate-spacing(2);
+        }
       }
       h2 {
         font-size: 2.5rem;
-        letter-spacing: 0;
         margin-bottom: 0;
         line-height: 150%;
         letter-spacing: 0.015em;
         font-family: "Fauna One", serif;
       }
       button {
-        cursor: pointer;
         width: max-content;
-
         box-sizing: border-box;
-        border-radius: 12px;
-
-        color: white;
-        font-size: 16px;
         font-weight: 600;
-        letter-spacing: 0;
-        &:hover {
-          background-color: #0b6853;
-        }
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 25px;
+        border: none;
       }
       p {
         font-size: 1.2rem;
@@ -65,14 +83,16 @@ section {
         line-height: 150%;
       }
     }
+
     .div-img {
       grid-column: 8/12;
-      padding: 6%;
+      padding: calculate-spacing(6);
       justify-content: center;
       display: flex;
       align-items: center;
 
-      #cont-img {
+      #cont-img,
+      #cont-img2 {
         img {
           width: 100%;
           max-width: 38rem;
@@ -81,25 +101,59 @@ section {
           border-radius: 20px;
         }
       }
+      .image-container {
+        position: relative;
+        display: inline-block;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+
+        .hover-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.6);
+          display: flex;
+          justify-content: center;
+          align-items: end;
+          opacity: 0;
+          color: white;
+          font-size: 1.5rem;
+          text-align: center;
+          transition: opacity 0.3s ease;
+          border-radius: 20px;
+        }
+
+        &:hover .hover-overlay {
+          opacity: 1; // Visible al pasar el mouse
+        }
+      }
     }
   }
 
-  /*Segunda seccion*/
+  // Segunda sección
   .section2 {
-    background-color: #008017;
-    padding: 0px;
-    .div-historia {
-      grid-column: 3 / 7;
+    background-color: map-get($background-colors, success);
+    padding: 0 calculate-spacing(2);
+    .div-text {
+      .flex {
+        justify-content: space-around;
+      }
       h2 {
         font-size: 3.5rem;
-        margin-bottom: 0;
-        line-height: 150%;
-        letter-spacing: 0.015em;
         font-family: "Cabin Sketch", cursive;
-        display: inline-block;
+        color: #ffffff;
+        transform: rotate(-5deg);
+        margin: 0;
+        margin-bottom: 3rem;
         color: #ffffff;
         transform: rotate(-5deg);
       }
+
       p {
         color: white;
         font-size: 1.2rem;
@@ -108,8 +162,9 @@ section {
         text-align: justify;
       }
     }
+
     .div-img {
-      padding: 6%;
+      padding: calculate-spacing(6);
       justify-content: center;
       display: flex;
       align-items: center;
@@ -122,17 +177,73 @@ section {
       }
     }
   }
+  //tercera seccion
+  .section3 {
+    color: #000000;
+    padding: calculate-spacing(3) calculate-spacing(2);
+    text-align: center;
+    .contenido {
+      width: 80%;
+      margin: auto;
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        line-height: 150%;
+        letter-spacing: 0.015em;
+        font-family: "Fauna One", serif;
+      }
+      button {
+        width: max-content;
+        box-sizing: border-box;
+        font-weight: 600;
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 25px;
+        border: none;
+      }
+      p {
+        font-size: 1.2rem;
+        letter-spacing: 0.015em;
+        line-height: 150%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  //cuarta seccion
+  .section4 {
+    display: flex;
+    justify-content: space-evenly;
+
+    .img1,
+    .img2 {
+      height: 20vh;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }
-// Responsive: Mostrar menú en pantallas pequeñas
+
+// Responsive
 @media only screen and (max-width: 768px) {
   section {
     .grid-section {
       display: flex;
       flex-direction: column;
       text-align: center;
-      padding: 4%;
+      padding: calculate-spacing(4);
+
       .flex {
         align-items: center;
+      }
+    }
+    .section3 {
+      .contenido {
+        h2 {
+          font-size: 3.5vh;
+        }
       }
     }
   }

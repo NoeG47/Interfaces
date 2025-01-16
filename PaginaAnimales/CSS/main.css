@@ -17,6 +17,14 @@
   background-color: #333333;
 }
 
+.bg-success {
+  background-color: #008017;
+}
+
+.bg-light {
+  background-color: #f0f0f0;
+}
+
 .icon-small {
   font-size: 1rem;
   padding: 11px;
@@ -48,10 +56,11 @@
   background-color: #0d7f39;
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid #095141;
+  color: #ffffff;
+  transition: background-color 0.3s;
 }
 .box-1:hover {
-  background-color: #095141;
+  background-color: #226d8c;
   color: #ffffff;
 }
 
@@ -59,10 +68,11 @@
   background-color: #109644;
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid #063a2e;
+  color: #ffffff;
+  transition: background-color 0.3s;
 }
 .box-2:hover {
-  background-color: #063a2e;
+  background-color: #1d5d78;
   color: #ffffff;
 }
 
@@ -70,10 +80,11 @@
   background-color: #12ad4e;
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid #04231c;
+  color: #ffffff;
+  transition: background-color 0.3s;
 }
 .box-3:hover {
-  background-color: #04231c;
+  background-color: #184d63;
   color: #ffffff;
 }
 
@@ -81,10 +92,11 @@
   background-color: #15c459;
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid #010c09;
+  color: #ffffff;
+  transition: background-color 0.3s;
 }
 .box-4:hover {
-  background-color: #010c09;
+  background-color: #133d4f;
   color: #ffffff;
 }
 
@@ -92,10 +104,11 @@
   background-color: #17db63;
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid black;
+  color: #ffffff;
+  transition: background-color 0.3s;
 }
 .box-5:hover {
-  background-color: black;
+  background-color: #0e2d3a;
   color: #ffffff;
 }
 
@@ -219,15 +232,23 @@ a h1 {
     background-color: #55f524;
   }
 }
-section {
-  /*Primera seccion*/
-  /*Segunda seccion*/
-}
 section .relieve {
   background-color: #008017;
   -webkit-clip-path: polygon(0% 100%, 12.5% 80%, 25% 100%, 37.5% 80%, 50% 100%, 62.5% 80%, 75% 100%, 87.5% 80%, 100% 100%);
           clip-path: polygon(0% 100%, 12.5% 80%, 25% 100%, 37.5% 80%, 50% 100%, 62.5% 80%, 75% 100%, 87.5% 80%, 100% 100%);
   height: 12vh;
+}
+section .sub-title {
+  background-color: #008017;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+section .sub-title h2 {
+  margin: 0%;
+  font-family: "Cabin Sketch", cursive;
+  border-top: 1px solid #008017;
+  border-bottom: 1px solid #008017;
 }
 section .foto-principal {
   height: 34vw;
@@ -239,7 +260,7 @@ section .foto-principal {
   background-position-y: -60px;
 }
 section .grid-section {
-  padding: 2% 0;
+  padding: 3% 2%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -252,27 +273,25 @@ section .grid-section .div-text .flex {
   flex-direction: column;
   justify-content: space-between;
 }
+section .grid-section .div-text .flex .info {
+  padding: 2%;
+}
 section .grid-section .div-text h2 {
   font-size: 2.5rem;
-  letter-spacing: 0;
   margin-bottom: 0;
   line-height: 150%;
   letter-spacing: 0.015em;
   font-family: "Fauna One", serif;
 }
 section .grid-section .div-text button {
-  cursor: pointer;
   width: -moz-max-content;
   width: max-content;
   box-sizing: border-box;
-  border-radius: 12px;
-  color: white;
-  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 0;
-}
-section .grid-section .div-text button:hover {
-  background-color: #0b6853;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
 }
 section .grid-section .div-text p {
   font-size: 1.2rem;
@@ -286,31 +305,60 @@ section .grid-section .div-img {
   display: flex;
   align-items: center;
 }
-section .grid-section .div-img #cont-img img {
+section .grid-section .div-img #cont-img img,
+section .grid-section .div-img #cont-img2 img {
   width: 100%;
   max-width: 38rem;
   height: 100%;
   max-height: 24rem;
   border-radius: 20px;
 }
+section .grid-section .div-img .image-container {
+  position: relative;
+  display: inline-block;
+}
+section .grid-section .div-img .image-container img {
+  width: 100%;
+  display: block;
+}
+section .grid-section .div-img .image-container .hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  opacity: 0;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+}
+section .grid-section .div-img .image-container:hover .hover-overlay {
+  opacity: 1;
+}
 section .section2 {
   background-color: #008017;
-  padding: 0px;
+  padding: 0 2%;
 }
-section .section2 .div-historia {
-  grid-column: 3/7;
+section .section2 .div-text .flex {
+  justify-content: space-around;
 }
-section .section2 .div-historia h2 {
+section .section2 .div-text h2 {
   font-size: 3.5rem;
-  margin-bottom: 0;
-  line-height: 150%;
-  letter-spacing: 0.015em;
   font-family: "Cabin Sketch", cursive;
-  display: inline-block;
+  color: #ffffff;
+  transform: rotate(-5deg);
+  margin: 0;
+  margin-bottom: 3rem;
   color: #ffffff;
   transform: rotate(-5deg);
 }
-section .section2 .div-historia p {
+section .section2 .div-text p {
   color: white;
   font-size: 1.2rem;
   letter-spacing: 0.015em;
@@ -330,6 +378,51 @@ section .section2 .div-img img {
   max-height: 26rem;
   border-radius: 20px;
 }
+section .section3 {
+  color: #000000;
+  padding: 3% 2%;
+  text-align: center;
+}
+section .section3 .contenido {
+  width: 80%;
+  margin: auto;
+}
+section .section3 .contenido h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  font-family: "Fauna One", serif;
+}
+section .section3 .contenido button {
+  width: -moz-max-content;
+  width: max-content;
+  box-sizing: border-box;
+  font-weight: 600;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+}
+section .section3 .contenido p {
+  font-size: 1.2rem;
+  letter-spacing: 0.015em;
+  line-height: 150%;
+  margin-bottom: 30px;
+}
+section .section4 {
+  display: flex;
+  justify-content: space-evenly;
+}
+section .section4 .img1,
+section .section4 .img2 {
+  height: 20vh;
+}
+section .section4 .img1 img,
+section .section4 .img2 img {
+  height: 100%;
+  width: 100%;
+}
 
 @media only screen and (max-width: 768px) {
   section .grid-section {
@@ -340,6 +433,9 @@ section .section2 .div-img img {
   }
   section .grid-section .flex {
     align-items: center;
+  }
+  section .section3 .contenido h2 {
+    font-size: 3.5vh;
   }
 }
 .navbar {

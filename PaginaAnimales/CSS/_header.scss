@@ -4,6 +4,8 @@ $background-colors: (
   secondary: #0b6853,
   accent: #7bf755,
   dark: #333333,
+  success: #008017,
+  light: #f0f0f0,
 );
 
 // Mapa para tamaños de íconos
@@ -44,9 +46,10 @@ $icon-sizes: (
     background-color: lighten(#0b682f, $i * 5%);
     padding: 1rem;
     margin: 0.5rem;
-    border: 1px solid darken(#0b6853, $i * 5%);
+    color: #ffffff;
+    transition: background-color 0.3s;
     &:hover {
-      background-color: darken(#0b6853, $i * 5%);
+      background-color: darken(#277da1, $i * 5%);
       color: #ffffff;
     }
   }
