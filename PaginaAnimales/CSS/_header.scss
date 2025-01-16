@@ -31,7 +31,7 @@ $icon-sizes: (
 // Generar tamaños definidos en el mapa $icon-sizes usando @each para íconos (i)
 @each $size, $font-size in $icon-sizes {
   .icon-#{$size} {
-    font-size: $font-size; // Tamaño del ícono
+    font-size: $font-size;
     padding: 11px;
     width: 100%;
     height: 100%;
@@ -40,7 +40,7 @@ $icon-sizes: (
   }
 }
 
-// Generar estilos para cajas con colores dinámicos usando @for
+// Generar estilos para los botones con colores dinámicos usando @for
 @for $i from 1 through 5 {
   .box-#{$i} {
     background-color: lighten(#0b682f, $i * 5%);
@@ -143,7 +143,6 @@ a {
   cursor: pointer;
 }
 
-// Responsive: Mostrar menú en pantallas pequeñas
 @media only screen and (max-width: 768px) {
   .toggle {
     @include flex-center;
