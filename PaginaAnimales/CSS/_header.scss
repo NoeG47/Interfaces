@@ -41,7 +41,7 @@ $icon-sizes: (
 // Generar estilos para cajas con colores dinámicos usando @for
 @for $i from 1 through 5 {
   .box-#{$i} {
-    background-color: lighten(#0b6853, $i * 5%);
+    background-color: lighten(#0b682f, $i * 5%);
     padding: 1rem;
     margin: 0.5rem;
     border: 1px solid darken(#0b6853, $i * 5%);
