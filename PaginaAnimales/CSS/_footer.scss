@@ -1,5 +1,5 @@
 .navbar {
-  background-color: map-get($background-colors, primary);
+  background-color: var(--color-primary);
   padding: 0.25rem 0.5rem;
   box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
   @include flex-center;
@@ -19,7 +19,7 @@
 
   span {
     font-size: 1.5rem;
-    color: map-get($background-colors, secondary);
+    color: var(--color-secondary);
     margin: 1rem 0rem;
     font-family: "Fauna One", serif;
     font-weight: bold;
@@ -38,20 +38,20 @@
     padding: 0 1rem;
 
     a {
-      color: map-get($background-colors, secondary);
+      color: var(--color-secondary);
       transition: color 0.3s ease, border-bottom 0.3s ease;
       border-bottom: 0.125rem solid transparent;
       font-family: "Cabin", serif;
       font-size: 1.6rem;
 
       &:hover {
-        color: map-get($background-colors, accent);
-        border-bottom: 0.125rem solid map-get($background-colors, accent);
+        color: var(--color-accent);
+        border-bottom: 0.125rem solid var(--color-accent);
       }
 
       &:visited,
       &:active {
-        color: map-get($background-colors, secondary);
+        color: var(--color-secondary);
       }
     }
   }
@@ -61,7 +61,7 @@
 }
 
 .copyright {
-  background-color: #407400;
+  background-color: var(--color-footer);
   padding: 1rem;
   text-align: center;
   color: white;

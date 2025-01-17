@@ -14,7 +14,7 @@
 }
 
 .bg-dark {
-  background-color: #333333;
+  background-color: #000000;
 }
 
 .bg-success {
@@ -22,7 +22,11 @@
 }
 
 .bg-light {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
+}
+
+.bg-footer {
+  background-color: #407400;
 }
 
 .icon-small {
@@ -31,7 +35,7 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  color: #0b6853;
+  color: var(--color-secondary);
 }
 
 .icon-medium, .menu-footer i, .menu i {
@@ -40,7 +44,7 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  color: #0b6853;
+  color: var(--color-secondary);
 }
 
 .icon-large {
@@ -49,7 +53,7 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  color: #0b6853;
+  color: var(--color-secondary);
 }
 
 .box-1 {
@@ -118,7 +122,7 @@ header {
   z-index: 1024;
 }
 header .navbar {
-  background-color: #f0ffcc;
+  background-color: var(--color-primary);
   padding: 0.25rem 0.5rem;
   box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
   display: flex;
@@ -129,7 +133,7 @@ header .navbar {
   transition: background-color 0.3s ease;
 }
 header.scrolled .navbar {
-  background-color: white;
+  background-color: var(--color-light);
 }
 
 .logo,
@@ -148,7 +152,7 @@ a img {
 .logo h1,
 a h1 {
   font-size: 2.25rem;
-  color: #0b6853;
+  color: var(--color-secondary);
   margin: 1rem 0rem;
   font-family: "Fauna One", serif;
 }
@@ -167,18 +171,18 @@ a h1 {
   padding: 0 1rem;
 }
 .menu li a {
-  color: #0b6853;
+  color: var(--color-secondary);
   transition: color 0.3s ease, border-bottom 0.3s ease;
   border-bottom: 0.125rem solid transparent;
   font-family: "Cabin", serif;
   font-size: 1.6rem;
 }
 .menu li a:hover {
-  color: #7bf755;
-  border-bottom: 0.125rem solid #7bf755;
+  color: var(--color-accent);
+  border-bottom: 0.125rem solid var(--color-accent);
 }
 .menu li a:visited, .menu li a:active {
-  color: #0b6853;
+  color: var(--color-secondary);
 }
 .menu-toggle {
   display: none;
@@ -224,22 +228,28 @@ a h1 {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   .menu.active li a:hover {
-    background-color: #7bf755;
-    color: #0b6853;
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
     border-radius: 1rem;
   }
   .menu.active li a:active {
-    background-color: #55f524;
+    background-color: var(--color-success, #004d0e);
   }
 }
-section .relieve {
-  background-color: #008017;
+section .relieve-reverse {
+  background-color: var(--color-success);
   -webkit-clip-path: polygon(0% 100%, 12.5% 80%, 25% 100%, 37.5% 80%, 50% 100%, 62.5% 80%, 75% 100%, 87.5% 80%, 100% 100%);
           clip-path: polygon(0% 100%, 12.5% 80%, 25% 100%, 37.5% 80%, 50% 100%, 62.5% 80%, 75% 100%, 87.5% 80%, 100% 100%);
   height: 12vh;
 }
+section .relieve {
+  background-color: var(--color-light);
+  -webkit-clip-path: polygon(0% 0%, 12.5% 20%, 25% 0%, 37.5% 20%, 50% 0%, 62.5% 20%, 75% 0%, 87.5% 20%, 100% 0%);
+          clip-path: polygon(0% 0%, 12.5% 20%, 25% 0%, 37.5% 20%, 50% 0%, 62.5% 20%, 75% 0%, 87.5% 20%, 100% 0%);
+  height: 12vh;
+}
 section .sub-title {
-  background-color: #008017;
+  background-color: var(--color-success);
   text-align: center;
   font-size: 3.5rem;
   color: #ffffff;
@@ -247,8 +257,8 @@ section .sub-title {
 section .sub-title h2 {
   margin: 0%;
   font-family: "Cabin Sketch", cursive;
-  border-top: 1px solid #008017;
-  border-bottom: 1px solid #008017;
+  border-top: 1px solid var(--color-success);
+  border-bottom: 1px solid var(--color-success);
 }
 section .foto-principal {
   height: 34vw;
@@ -263,6 +273,7 @@ section .grid-section {
   padding: 3% 2%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  background-color: var(--color-light);
 }
 section .grid-section .div-text {
   grid-column: 3/7;
@@ -282,6 +293,7 @@ section .grid-section .div-text h2 {
   line-height: 150%;
   letter-spacing: 0.015em;
   font-family: "Fauna One", serif;
+  color: var(--color-dark);
 }
 section .grid-section .div-text button {
   width: -moz-max-content;
@@ -297,6 +309,7 @@ section .grid-section .div-text p {
   font-size: 1.2rem;
   letter-spacing: 0.015em;
   line-height: 150%;
+  color: var(--color-dark);
 }
 section .grid-section .div-img {
   grid-column: 8/12;
@@ -342,7 +355,7 @@ section .grid-section .div-img .image-container:hover .hover-overlay {
   opacity: 1;
 }
 section .section2 {
-  background-color: #008017;
+  background-color: var(--color-success);
   padding: 0 2%;
 }
 section .section2 .div-text .flex {
@@ -382,6 +395,7 @@ section .section3 {
   color: #000000;
   padding: 3% 2%;
   text-align: center;
+  background-color: var(--color-light);
 }
 section .section3 .contenido {
   width: 80%;
@@ -393,6 +407,7 @@ section .section3 .contenido h2 {
   line-height: 150%;
   letter-spacing: 0.015em;
   font-family: "Fauna One", serif;
+  color: var(--color-dark);
 }
 section .section3 .contenido button {
   width: -moz-max-content;
@@ -409,10 +424,12 @@ section .section3 .contenido p {
   font-size: 1.2rem;
   letter-spacing: 0.015em;
   line-height: 150%;
+  color: var(--color-dark);
 }
 section .section4 {
   display: flex;
   justify-content: space-evenly;
+  background-color: var(--color-light);
 }
 section .section4 .img1,
 section .section4 .img2 {
@@ -439,7 +456,7 @@ section .section4 .img2 img {
   }
 }
 .navbar {
-  background-color: #f0ffcc;
+  background-color: var(--color-primary);
   padding: 0.25rem 0.5rem;
   box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
   display: flex;
@@ -463,7 +480,7 @@ section .section4 .img2 img {
 }
 .logo span {
   font-size: 1.5rem;
-  color: #0b6853;
+  color: var(--color-secondary);
   margin: 1rem 0rem;
   font-family: "Fauna One", serif;
   font-weight: bold;
@@ -483,28 +500,58 @@ section .section4 .img2 img {
   padding: 0 1rem;
 }
 .menu-footer li a {
-  color: #0b6853;
+  color: var(--color-secondary);
   transition: color 0.3s ease, border-bottom 0.3s ease;
   border-bottom: 0.125rem solid transparent;
   font-family: "Cabin", serif;
   font-size: 1.6rem;
 }
 .menu-footer li a:hover {
-  color: #7bf755;
-  border-bottom: 0.125rem solid #7bf755;
+  color: var(--color-accent);
+  border-bottom: 0.125rem solid var(--color-accent);
 }
 .menu-footer li a:visited, .menu-footer li a:active {
-  color: #0b6853;
+  color: var(--color-secondary);
 }
 .copyright {
-  background-color: #407400;
+  background-color: var(--color-footer);
   padding: 1rem;
   text-align: center;
   color: white;
+}
+
+:root {
+  --color-primary: #f0ffcc;
+  --color-secondary: #0b6853;
+  --color-accent: #7bf755;
+  --color-dark: #000000;
+  --color-success: #008017;
+  --color-light: #ffffff;
+  --color-footer: #407400;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #1a1a1a;
+    --color-secondary: #32cd32;
+    --color-accent: #0e6655;
+    --color-dark: #ffffff;
+    --color-success: #000000;
+    --color-light: #001100;
+  }
 }
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+html.dark-mode {
+  --color-primary: #1a1a1a;
+  --color-secondary: #32cd32;
+  --color-accent: #0e6655;
+  --color-dark: #ffffff;
+  --color-success: #000000;
+  --color-light: #000000;
+  --color-footer: #001100;
 }/*# sourceMappingURL=main.css.map */

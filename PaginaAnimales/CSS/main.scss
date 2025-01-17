@@ -5,8 +5,24 @@
 @import "header";
 @import "body";
 @import "footer";
+:root {
+  @include color-scheme($background-colors, $dark-colors);
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+//Se podria cambiar a piñon eliminando las siguientes líneas
+//Para simular el cambio de modo
+//Pero se ha añadido un boton con JS
+html.dark-mode {
+  --color-primary: #1a1a1a;
+  --color-secondary: #32cd32;
+  --color-accent: #0e6655;
+  --color-dark: #ffffff;
+  --color-success: #000000;
+  --color-light: #000000;
+  --color-footer: #001100;
 }

@@ -3,9 +3,18 @@ $background-colors: (
   primary: #f0ffcc,
   secondary: #0b6853,
   accent: #7bf755,
-  dark: #333333,
+  dark: #000000,
   success: #008017,
-  light: #f0f0f0,
+  light: #ffffff,
+  footer: #407400,
+);
+$dark-colors: (
+  primary: #1a1a1a,
+  secondary: #32cd32,
+  accent: #0e6655,
+  dark: #ffffff,
+  success: #000000,
+  light: #001100,
 );
 
 // Mapa para tamaños de íconos
@@ -21,7 +30,17 @@ $icon-sizes: (
   justify-content: center;
   align-items: center;
 }
+@mixin color-scheme($light-map, $dark-map) {
+  @each $name, $color in $light-map {
+    --color-#{$name}: #{$color};
+  }
 
+  @media (prefers-color-scheme: dark) {
+    @each $name, $color in $dark-map {
+      --color-#{$name}: #{$color};
+    }
+  }
+}
 // Generar clases para colores usando @each
 @each $name, $color in $background-colors {
   .bg-#{$name} {
@@ -36,7 +55,7 @@ $icon-sizes: (
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    color: map-get($background-colors, secondary);
+    color: var(--color-secondary);
   }
 }
 
@@ -62,7 +81,7 @@ header {
   z-index: 1024;
 
   .navbar {
-    background-color: map-get($background-colors, primary);
+    background-color: var(--color-primary);
     padding: 0.25rem 0.5rem;
     box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
     @include flex-center;
@@ -73,7 +92,7 @@ header {
 
   &.scrolled {
     .navbar {
-      background-color: white;
+      background-color: var(--color-light);
     }
   }
 }
@@ -91,7 +110,7 @@ a {
 
   h1 {
     font-size: 2.25rem;
-    color: map-get($background-colors, secondary);
+    color: var(--color-secondary);
     margin: 1rem 0rem;
     font-family: "Fauna One", serif;
   }
@@ -109,20 +128,20 @@ a {
     padding: 0 1rem;
 
     a {
-      color: map-get($background-colors, secondary);
+      color: var(--color-secondary);
       transition: color 0.3s ease, border-bottom 0.3s ease;
       border-bottom: 0.125rem solid transparent;
       font-family: "Cabin", serif;
       font-size: 1.6rem;
 
       &:hover {
-        color: map-get($background-colors, accent);
-        border-bottom: 0.125rem solid map-get($background-colors, accent);
+        color: var(--color-accent);
+        border-bottom: 0.125rem solid var(--color-accent);
       }
 
       &:visited,
       &:active {
-        color: map-get($background-colors, secondary);
+        color: var(--color-secondary);
       }
     }
   }
@@ -174,13 +193,13 @@ a {
         transition: background-color 0.3s ease, color 0.3s ease;
 
         &:hover {
-          background-color: map-get($background-colors, accent);
-          color: map-get($background-colors, secondary);
+          background-color: var(--color-accent);
+          color: var(--color-secondary);
           border-radius: 1rem;
         }
-
+        $success-darker: darken(map-get($background-colors, success), 10%);
         &:active {
-          background-color: darken(map-get($background-colors, accent), 10%);
+          background-color: var(--color-success, $success-darker);
         }
       }
     }
